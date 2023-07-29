@@ -1,0 +1,126 @@
+.container {
+    margin-top: 120px;
+  }
+  
+  /* what we need to do is to create a new class and switch the colors. Primary color will be #fff9f9 and secondary color will be #161616 */
+  
+  .light-theme {
+    --primary-clr: #fff9f9;
+    --primary-rgba-7: rgba(255, 255, 255, 0.4);
+    --secondary-clr: #161616;
+    --secondary-rgba-3: rgba(0, 0, 0, 0.3);
+  }
+  
+  .light-dark-mode {
+    width: 40px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-clr);
+    background-color: crimson;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 200ms ease-in-out background-color, 200ms ease-in-out color;
+  }
+  
+  .light-dark-mode:active {
+    transform: scale(0.8);
+  }
+  
+  .light-dark-mode:hover {
+    background-color: green;
+    color: gold;
+  }
+  
+  .card {
+    width: clamp(300px, 92vw, 400px);
+    background: linear-gradient(90deg, orange, yellow);
+    box-shadow: 0 0 0.5rem var(--secondary-rgba-3);
+    border-radius: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border: none;
+    width: 500px;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .search-container {
+    width: 320px;
+    height: 40px;
+    position: relative;
+  }
+  
+  .search-container input {
+    /* as default 40px width and 0 padding */
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2rem;
+    padding: 0;
+    outline: none;
+    border-radius: 100vw;
+    border: none;
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    background-color: transparent;
+    border: 2px solid green;
+    color: blue;
+    transition: 200ms ease-in-out width, 200ms ease-in-out padding;
+  }
+  
+  ::placeholder {
+    color: grey;
+    font-weight: 500;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: crimson;
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-clr);
+    cursor: pointer;
+    transition: 200ms ease-in-out background-color, 200ms ease-in-out color;
+  }
+  .search-icon:hover {
+    background: green;
+    color: gold;
+  }
+  
+  .search-icon:active {
+    transform: scale(0.8) translateY(-50%);
+  }
+  
+  .search-container:hover input,
+  .search-container input:focus {
+    width: 100%;
+    padding: 0 4rem 0 1rem;
+  }
+  
+  .random-btn {
+    position: absolute;
+    left: 1000px;
+    top: 215px;
+  }
+  
+  .random-btn i {
+    color: #fff9f9;
+  }

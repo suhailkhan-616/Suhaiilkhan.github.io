@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    background-repeat: repeat-y;
+    background-size: 150%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 100vw;
+  }
+  
+  /* Header */
+  .header-container {
+    background: linear-gradient(90deg, yellow, orange);
+  }
+  
+  /* Navbar */
+  .nav-container {
+    display: flex;
+  }
+  
+  .nav-container #heading {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    /* background: linear-gradient(90deg, orange, yellow, red); */
+    color: white;
+    display: inline;
+  }
+  
+  .nav-container #meal-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    padding: 5px;
+  }
+  
+  .header-container .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    top: 30px;
+}
+
+.header-container .nav-links li {
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    /* margin-left: 2rem; */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--secondary-clr);
+  }
+  
+  :root {
+    --primary-clr: #161616;
+    --primary-rgba-7: rgba(0, 0, 0, 0.4);
+    --secondary-clr: #fff9f9;
+    --secondary-rgba: rgba(255, 255, 255, 0.3);
+    --secondary-rgba-3: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Meal Container CSS */
+  .meal {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .meals-container h2 {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: rgb(254, 253, 255);
+    text-shadow: 0 0 0.4rem var(--secondary-rgba-3);
+  }
+  
+  .meal-card {
+    width: clamp(300px, 60vw, 400px);
+    box-shadow: 0 0 0.4rem var(--secondary-rgba-3);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: 200ms ease-in-out background-color;
+    border: 1px solid whitesmoke;
+  }
+  
+  .meal-card-img-container {
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+  }
+  
+  .meal-card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .meal-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    transition: 200ms ease-in-out color, 200ms ease-in-out text-shadow;
+  }
+  
+  .meal-name p {
+    color: red;
+  }
+  
+  .meal-name i {
+    color: #ff0000;
+    text-shadow: none;
+    cursor: pointer;
+  }
+  
+  .meal-card:hover {
+    background: linear-gradient(90deg, yellow, cyan);
+  }
+  
+  .meal-card:hover .meal-name {
+    color: var(--primary-clr);
+    text-shadow: 0 0 0.2rem green;
+  }
+  
+  .recipe-link a {
+    text-decoration: none;
+  }
+  
+  .recipe-link a button {
+    font-size: 18px;
+    font-family: 500;
+  }
+  
+  /* Meal Details Pop-up CSS */
+  .pop-up-container {
+    position: fixed;
+    inset: 0;
+    background-color: var(--primary-rgba-7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .pop-up {
+    width: clamp(200px, 92vw, 900px);
+    max-height: 90vh;
+    box-shadow: 0 0 0.5rem var(--secondary-rgba-3);
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .pop-up-inner {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .pop-up i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: auto;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .pop-up .left i {
+    display: none;
+  }
+  
+  .right {
+    overflow-y: scroll;
+    max-height: 85vh;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+  }
+  
+  .right div {
+    margin-bottom: 2rem;
+  }
+  
+  .right ul li {
+    padding-right: 2rem;
+    list-style-position: inside;
+  }
+  
+  .right .meal-info,
+  .right ul {
+    margin-top: 0.5rem;
+  }
